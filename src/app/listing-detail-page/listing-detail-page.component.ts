@@ -9,7 +9,7 @@ import { Listing } from '../types';
   styleUrls: ['./listing-detail-page.component.css']
 })
 export class ListingDetailPageComponent implements OnInit {
-  listing: Listing;
+  listing: Listing
 
   constructor(
     private route: ActivatedRoute,
@@ -17,7 +17,7 @@ export class ListingDetailPageComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    this.listing = fakeListings.find(listing => listing.id === id);
+    this.listing = fakeListings.find(listing => listing.id === id)!;
   }
 
 }
